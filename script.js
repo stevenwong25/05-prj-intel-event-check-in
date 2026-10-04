@@ -16,11 +16,14 @@ form.addEventListener("submit", function (event) {
   const name = nameInput.value;
   const team = teamSelect.value;
   const teamName = teamSelect.selectedOptions[0].text;
+  let greeting = document.getElementById("greeting");
+  let totalCount = document.getElementById("attendeeCount");
 
   console.log(name, teamName);
 
   // Increment attendance count
   count++;
+  totalCount.textContent = count;
   console.log("Total check-ins: " + count);
 
   // Update progress bar
@@ -33,6 +36,8 @@ form.addEventListener("submit", function (event) {
 
   // Show welcome message
   const message = `🎉 Welcome, ${name} from ${teamName}!`;
+  greeting.textContent = message;
+  greeting.style.display = "block";
   console.log(message);
 
   form.reset();
