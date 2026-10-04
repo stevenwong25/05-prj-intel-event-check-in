@@ -258,6 +258,15 @@ button .fas {
   color: #003c71;
 }
 
+.celebration-message {
+  background-color: #fff7ed;
+  color: #9a3412;
+}
+
+.celebration-message strong {
+  color: #0071c5;
+}
+
 /* Counter */
 #attendeeCount {
   color: #0071c5;
