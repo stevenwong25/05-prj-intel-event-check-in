@@ -326,6 +326,15 @@ select {
   margin-bottom: 20px;
 }
 
+.winners-label {
+  display: none;
+  margin-bottom: 10px;
+  color: #0071c5;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .teams-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -349,6 +358,10 @@ select {
 }
 .team-card.power {
   background-color: #fff7ed;
+}
+
+.team-card.winning-team {
+  border: 3px solid #0071c5;
 }
 
 .team-name {
