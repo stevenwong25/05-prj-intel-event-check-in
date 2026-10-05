@@ -23,6 +23,7 @@ let attendanceData = {
   winningTeams: []
 };
 
+// Save attendance data to localStorage
 function saveAttendance() {
   try {
     localStorage.setItem(storageKey, JSON.stringify(attendanceData));
@@ -31,6 +32,7 @@ function saveAttendance() {
   }
 }
 
+// Get winning teams based on attendance data
 function getWinningTeams() {
   const teamCards = document.querySelectorAll(".team-card");
   let highestTeamCount = 0;
@@ -52,6 +54,7 @@ function getWinningTeams() {
   return winningTeams;
 }
 
+// Show greeting message based on attendance data
 function showGreeting() {
   greeting.classList.remove("celebration-message");
   greeting.style.display = "block";
@@ -71,6 +74,7 @@ function showGreeting() {
   greeting.textContent = attendanceData.message;
 }
 
+// Render attendance data on the page
 function renderAttendance() {
   count = attendanceData.count;
   totalCount.textContent = count;
@@ -105,6 +109,8 @@ function renderAttendance() {
   }
 }
 
+
+// Load saved attendance data from localStorage
 function loadAttendance() {
   try {
     const savedAttendance = localStorage.getItem(storageKey);
