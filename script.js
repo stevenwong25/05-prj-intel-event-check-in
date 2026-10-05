@@ -37,6 +37,13 @@ form.addEventListener("submit", function (event) {
   teamCounter.textContent = parseInt(teamCounter.textContent) + 1;
   console.log(`${teamName} count: ${teamCounter.textContent}`);
 
+  // Add the attendee to the selected team's list
+  const attendeeList = document.getElementById(team + "Attendees");
+  const attendee = document.createElement("li");
+  attendee.textContent = name;
+  attendeeList.appendChild(attendee);
+  console.log(`${name} added to ${teamName} list.`);
+
   // Show welcome message
   const message = `🎉 Welcome, ${name} from ${teamName}!`;
   greeting.textContent = message;
@@ -64,12 +71,12 @@ form.addEventListener("submit", function (event) {
     greeting.textContent = winningTeams.length > 1
       ? "🎉 Congratulations! The winning teams are "
       : "🎉 Congratulations! The winning team is ";
-
     const winners = document.createElement("strong");
     winners.textContent = winningTeams.join(" and ");
     greeting.appendChild(winners);
     greeting.appendChild(document.createTextNode("!"));
     greeting.classList.add("celebration-message");
+    console.log(`Winning team(s): ${winningTeams.join(" and ")}`);
   }
 
   form.reset();

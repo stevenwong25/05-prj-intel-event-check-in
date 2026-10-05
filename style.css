@@ -357,6 +357,14 @@ select {
   color: #475569;
 }
 
+.attendee-list {
+  margin: 5px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #475569;
+  font-size: 14px;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
